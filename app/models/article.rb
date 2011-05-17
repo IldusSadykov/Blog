@@ -21,5 +21,5 @@ class Article < ActiveRecord::Base
  
   def published?
       published_at.present?
-
+  end
 end

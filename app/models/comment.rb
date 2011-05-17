@@ -7,8 +7,7 @@ class Comment < ActiveRecord::Base
   after_create :email_article_author
   
   def article_should_be_published
-     errors.add(:article_id, "is not published yet") if article
-&& !article.published?
+     errors.add(:article_id, "is not published yet") if article && !article.published?
   end
   
   def after_create
