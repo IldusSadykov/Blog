@@ -1,3 +1,13 @@
-Notifier#email_friend
+<html>
+<body>
+<p>
+  One of your friends, <%= @sender_name %>,
+  thinks you like an article we have written.
+</p>
 
-<%= @greeting %>, find me in app/views/app/views/notifier/email_friend.text.erb
+<p>
+  Come check all the information about <strong><%= @article.title %></strong> at
+  <%= article_url @article, :host => 'localhost:3000' %>
+</p>
+</body>
+</html>
